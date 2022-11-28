@@ -1,0 +1,20 @@
+targets:
+  $default:
+    sources:
+      - $package$
+      - lib/$lib$
+      - resources/**
+    builders:
+      artemis:
+        options:
+          generate_helpers: true
+          schema_mapping:
+            - schema: resources/schema/schema.graphql
+              queries_glob: resources/queries/queries.graphql
+              output: lib/src/api/api.dart
+              naming_scheme: simple
+          scalar_mapping:
+            - graphql_type: DateTime
+              dart_type: DateTime
+            - graphql_type: UUID
+              dart_type: String

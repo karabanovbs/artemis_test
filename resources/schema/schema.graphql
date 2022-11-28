@@ -1,0 +1,21 @@
+type Mutation {
+    mutationA(input: InputA!): OutputA!
+    mutationB(input: InputB!): UnionB!
+}
+
+union UnionB = OutputA | OutputAError
+
+type OutputA {
+    fieldA: String!
+}
+
+type OutputAError {
+    fieldError: String!
+}
+
+input InputA {
+    fieldA: String!
+}
+input InputB {
+    fieldA: String!
+}

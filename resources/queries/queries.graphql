@@ -1,0 +1,17 @@
+mutation MutationA($input: InputA!) {
+  mutationA(input: $input) {
+    fieldA
+  }
+}
+
+mutation SignIn($input: InputB!) {
+  mutationB(input: $input) {
+    ... on OutputA {
+      fieldA
+    }
+    ... on OutputAError {
+      fieldError
+    }
+  }
+}
+
