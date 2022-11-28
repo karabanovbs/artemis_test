@@ -15,10 +15,7 @@ dependencies:
   gql: '>=0.12.3 <1.0.0'
 
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
   flutter_lints: ^2.0.0
-  artemis: ^7.9.0-beta
   build_runner: ^2.2.1
   json_serializable: ^6.3.2
 
